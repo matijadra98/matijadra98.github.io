@@ -1,0 +1,52 @@
+/* Spantech Poland — mockup na Spantech temi.
+   style.css je neizmenjena kopija SPL teme (Companies/SPL/Website/izvor/css/style.css), iste boje i fontovi.
+   Ovde su samo dopune za sadržaj spantech.pl. */
+
+/* logo sa oznakom POLAND (odnos 3.07:1, malo viši od SPL logoa) */
+header .logo img{height:62px}
+@media (max-width:1300px){header .logo img{height:56px}}
+@media (max-width:620px){header .logo img{height:42px}}
+@media (max-width:460px){header .logo img{height:36px}}
+footer .logo img{height:52px}
+
+/* veza sa matičnom firmom u gornjoj traci */
+.util .u-left a{color:#fff;font-weight:600}
+.util .u-left a:hover{text-decoration:underline}
+
+/* fotografije sa spantech.pl pune okvir pločice */
+.tile .t-img img.photo{object-fit:cover;padding:0}
+
+/* naslovna: traka bez brojeva */
+.cband.solo .cband-head{max-width:72ch}
+
+/* logotipi partnera (ACD, Gazcal, Uniphos) */
+.plogo{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);background:#fff;padding:10px}
+.res-card .plogo{margin-bottom:6px}
+
+/* tri kolone sa spiskovima (Applications / Features / Downloads) */
+.pillar ul.checks{margin-top:10px}
+.pillar a.dl{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* spisak gasova */
+.gaslist summary{font-family:var(--head);font-size:20px;text-transform:uppercase;letter-spacing:.02em}
+.gaslist .acc-body{max-width:none}
+table.gas{font-size:14px}
+table.gas th{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:12px 14px;white-space:nowrap}
+table.gas td{padding:10px 14px}
+table.gas td.f{text-align:center;width:90px}
+table.gas td.f a{display:inline-grid;place-items:center;width:30px;height:30px;color:var(--red);border:1px solid var(--line);background:#fff}
+table.gas td.f a:hover{border-color:var(--red)}
+table.gas td.f svg{width:15px;height:15px}
+
+/* About: logo kao slika */
+.story-media img.logo-img{object-fit:contain;background:#fff;padding:60px}
+
+@media(max-width:620px){
+  .plogo{width:90px;height:90px}
+  .story-media img.logo-img{padding:30px}
+}
+
+/* Applications / Features / Downloads: tri jednake kolone, spisak u jednoj koloni */
+.pillars.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pillar ul.checks{grid-template-columns:1fr;columns:auto}
+@media(max-width:860px){.pillars.three{grid-template-columns:1fr}}

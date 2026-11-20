@@ -287,3 +287,18 @@ footer .logo img{border-radius:var(--r-sm)}
   .tile:before{transition:none}
   .ph-img:hover img,.cstat:hover b,.fig.light:hover,.inds.compact .ind:hover svg{transform:none}
 }
+
+/* ═══ FONT (korisnik 20.11.2026: predlog C) — naslovi Source Serif 4, tekst Schibsted Grotesk; bez uskih velikih slova ═══ */
+:root{--head:'Source Serif 4',Georgia,'Times New Roman',serif}
+h1,h2,h3,h4,.h{font-weight:600;text-transform:none;letter-spacing:-.01em;line-height:1.12}
+h1{font-size:clamp(32px,4vw,50px)}
+h2{font-size:clamp(24px,2.7vw,34px)}
+h3{font-size:clamp(17px,1.45vw,20px)}
+.phero h1{font-size:clamp(32px,3.6vw,46px);max-width:18ch}
+.cband-head h1{font-size:clamp(18px,1.5vw,21px)}
+.res-card h3{font-size:24px}
+.cstat b{letter-spacing:-.01em}
+.ind strong,.inds.compact .ind strong{text-transform:none;letter-spacing:0;font-size:16px}
+.gaslist summary{text-transform:none;letter-spacing:0}
+nav.main > .item > a{text-transform:none;letter-spacing:0;font-size:14.5px}
+.fig b{letter-spacing:-.01em}

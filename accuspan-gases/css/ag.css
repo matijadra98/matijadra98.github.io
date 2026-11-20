@@ -354,3 +354,29 @@ table.cyl td{padding:10px 14px}
 .card .c-img{display:flex;align-items:center;justify-content:center}
 .card .c-img img:not(.cover){height:200px;width:auto;max-width:100%;padding:14px;object-fit:contain}
 .card .c-img{background:#fff;border-bottom:1px solid #EEF0F3}
+
+/* ═══ MAPA POKRIVENOSTI (po uzoru na Spantech mapu distributera, mekši stil) ═══ */
+:root{--k-uk:#C8202F;--k-eu:#7A1520;--k-in:#E8939B}
+.mapbox,.mappanel{border-radius:var(--r);border-color:#E8EAEE;box-shadow:var(--soft)}
+.mapbox{border:1px solid #E8EAEE}
+.mapstage{border-radius:var(--r-sm);border-color:#EEF0F3;overflow:hidden;min-height:380px}
+.rtab{border-radius:999px;text-transform:none;letter-spacing:0;font-size:13px;display:inline-flex;align-items:center;gap:8px}
+.rtab i{width:10px;height:10px;border-radius:50%;display:block}
+.rtab.k-uk i{background:var(--k-uk)}.rtab.k-eu i{background:var(--k-eu)}.rtab.k-in i{background:var(--k-in)}
+.rtab.on{background:var(--ink);border-color:var(--ink);color:#fff}
+#worldmap path.c{stroke:#fff;stroke-width:.5;transition:opacity .25s ease,fill .25s ease}
+#worldmap path.c.k-uk{fill:var(--k-uk)}
+#worldmap path.c.k-eu{fill:var(--k-eu)}
+#worldmap path.c.k-in{fill:var(--k-in)}
+#worldmap path.c.dim{opacity:.28}
+#worldmap path.c:hover{opacity:1;filter:brightness(1.08)}
+#worldmap circle.pin{fill:#fff;stroke:var(--ink);stroke-width:2.5}
+#worldmap circle.halo{fill:var(--ink);opacity:.18}
+#worldmap text.plab{font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:3px}
+.maptip{border-radius:6px}
+.maplegend i.k-uk{background:var(--k-uk)}.maplegend i.k-eu{background:var(--k-eu)}.maplegend i.k-in{background:var(--k-in)}
+.maplegend i{border-radius:50%}
+.mappanel{border:1px solid #E8EAEE;border-top:4px solid var(--k-uk);transition:border-color .25s ease}
+.mappanel.k-eu{border-top-color:var(--k-eu)}.mappanel.k-in{border-top-color:var(--k-in)}
+.mappanel .pbadge{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600;border-radius:999px;padding:5px 12px;align-self:flex-start}
+.mappanel h3{font-size:24px}

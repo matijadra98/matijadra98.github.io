@@ -1,0 +1,356 @@
+/* AccuSpan Gases — mockup na Spantech temi (isti sistem kao Spantech Poland: mekši MJS raspored, Source Serif 4 + Schibsted Grotesk).
+   style.css je neizmenjena kopija SPL teme (Companies/SPL/Website/izvor/css/style.css), iste boje i fontovi.
+   Ovde su samo dopune za sadržaj spantech.pl. */
+
+/* logo sa oznakom GASES (odnos 3.28:1, kao Spantech Poland) */
+header .logo img{height:58px}
+@media (max-width:1300px){header .logo img{height:52px}}
+@media (max-width:620px){header .logo img{height:40px}}
+@media (max-width:460px){header .logo img{height:34px}}
+footer .logo img{height:50px}
+
+/* veza sa matičnom firmom u gornjoj traci */
+.util .u-left a{color:#fff;font-weight:600}
+.util .u-left a:hover{text-decoration:underline}
+
+/* fotografije sa spantech.pl pune okvir pločice */
+.tile .t-img img.photo{object-fit:cover;padding:0}
+
+/* naslovna: traka bez brojeva */
+.cband.solo .cband-head{max-width:72ch}
+
+/* logotipi partnera (ACD, Gazcal, Uniphos) */
+.plogo{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);background:#fff;padding:10px}
+.res-card .plogo{margin-bottom:6px}
+
+/* tri kolone sa spiskovima (Applications / Features / Downloads) */
+.pillar ul.checks{margin-top:10px}
+.pillar a.dl{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+
+/* spisak gasova */
+.gaslist summary{font-family:var(--head);font-size:20px;text-transform:uppercase;letter-spacing:.02em}
+.gaslist .acc-body{max-width:none}
+table.gas{font-size:14px}
+table.gas th{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:12px 14px;white-space:nowrap}
+table.gas td{padding:10px 14px}
+table.gas td.f{text-align:center;width:90px}
+table.gas td.f a{display:inline-grid;place-items:center;width:30px;height:30px;color:var(--red);border:1px solid var(--line);background:#fff}
+table.gas td.f a:hover{border-color:var(--red)}
+table.gas td.f svg{width:15px;height:15px}
+
+/* About: logo kao slika */
+.story-media img.logo-img{object-fit:contain;background:#fff;padding:60px}
+
+@media(max-width:620px){
+  .plogo{width:90px;height:90px}
+  .story-media img.logo-img{padding:30px}
+}
+
+/* Applications / Features / Downloads: tri jednake kolone, spisak u jednoj koloni */
+.pillars.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pillar ul.checks{grid-template-columns:1fr;columns:auto}
+@media(max-width:860px){.pillars.three{grid-template-columns:1fr}}
+
+/* ═══ Sve ispod je preuzeto iz MJS teme (Companies/MJS/Website/Mockup_v2/izvor/css/mjs.css, staging), MJS bordo → Spantech crvena.
+   Korisnik 20.11.2026: „napravi ga po uzoru na MJS staging“. ═══ */
+/* ═══ MEKŠI DIZAJN (korisnik 19.11.2026: „previše kockasto“) ═══
+   zaobljeni uglovi, blage senke umesto oštrih ivica, dugmad kao pilule, okrugle ikonice */
+:root{--r:10px;--r-sm:6px;--soft:0 1px 2px rgba(34,36,42,.04),0 10px 28px rgba(34,36,42,.07);
+  --body:'Schibsted Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+.btn,.tlink,.icon-btn{border-radius:6px}
+.tile,.pillar,.ind,.res-card,.xform,.office,.cmp-wrap,.acc,.spec{border-radius:var(--r)}
+.tile,.pillar,.ind,.res-card:not(.red),.xform{border-color:#E8EAEE;box-shadow:var(--soft)}
+.tile{overflow:hidden}
+.tile:hover,.ind:hover,.pillar:hover{box-shadow:0 2px 4px rgba(34,36,42,.05),0 18px 40px rgba(34,36,42,.10)}
+.why-img img,.story-media img,.ph-img img{border-radius:var(--r)}
+.why-stamp,.story-stamp{border-radius:var(--r-sm)}
+.xform{border-top-width:1px}
+.xform input,.xform textarea,.xform select{border-radius:var(--r-sm)}
+.acc{overflow:hidden;border:1px solid #E8EAEE;background:#fff;box-shadow:var(--soft)}
+.acc details:last-child{border-bottom:0}
+.cband{border-bottom:0}
+.submenu{border-radius:var(--r-sm);overflow:hidden}
+footer .logo{border-radius:var(--r-sm)}
+.nform input{border-radius:6px}
+.ind svg{width:44px;height:44px;padding:10px;border-radius:50%;background:rgba(200,32,47,.08);stroke-width:1.5}
+/* tamne trake: zaobljen „kontejner“ umesto ivice do ivice */
+.band{background:transparent;padding:0 0 8px}
+.band .wrap{background:var(--ink);border-radius:var(--r);overflow:hidden}
+.band-cell{border-color:rgba(255,255,255,.08)!important}
+.pcta .wrap{background:var(--ink);border-radius:var(--r);padding:56px 52px}
+.pcta{background:transparent;padding:0 0 72px}
+
+/* ikonice kategorija: tanke linije u punom bordo krugu (umesto pločica sa sajta) */
+.band-cell .cat-li{width:60px;height:60px;padding:15px;border-radius:50%;background:var(--red);color:#fff;flex:none}
+
+/* ═══ STRANICE PROIZVODA (iz Sanjayevog nacrta) ═══ */
+.phero.pimg .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.phero.pimg h1{max-width:20ch}
+.ph-img{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.ph-img img{width:100%;height:340px;object-fit:cover;display:block}
+.facts{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.facts li{font-size:13.5px;font-weight:500;color:#fff;padding:7px 14px;border-radius:6px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14)}
+.phero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.pillars.four{grid-template-columns:repeat(4,1fr)}
+.pillar h3{margin:0 0 9px;font-size:19px;display:flex;align-items:center;gap:12px}
+.snum{flex:none;width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;
+  font-family:var(--body);font-size:14px;font-weight:600;letter-spacing:0}
+.checks.one{grid-template-columns:1fr}
+.checks.two{grid-template-columns:repeat(2,1fr)}
+.darksec{padding:0 0 78px}
+.darksec .wrap{background:var(--ink);border-radius:var(--r);padding:60px 56px;color:#fff;align-items:center}
+.darksec h2{color:#fff}
+.darksec .checks{margin-top:22px}
+.darksec .checks li{color:#D3D6DA}
+.figs{display:grid;gap:16px}
+.fig{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:24px 26px}
+.fig b{display:block;font-family:var(--head);font-size:44px;line-height:1;color:#F3A3AA}
+.fig span{display:block;margin-top:6px;font-size:14.5px;color:#B9BDC2}
+.band.three .wrap{grid-template-columns:repeat(3,1fr)}
+.band.three .band-cell{border-right:1px solid rgba(255,255,255,.08)}
+.band.three .band-cell:last-child{border-right:0}
+.band.three .band-cell:nth-child(n){border-top:0}
+table.sizes{font-size:14.5px}
+table.sizes th{font-family:var(--body);font-size:12.5px;font-weight:600;background:var(--ink);color:#fff;padding:13px 18px;text-transform:none;letter-spacing:0}
+table.sizes td{padding:11px 18px}
+
+@media(max-width:1080px){
+  .pillars.four{grid-template-columns:repeat(2,1fr)}
+  .band.three .wrap{grid-template-columns:1fr}
+  .band.three .band-cell{border-right:0;border-top:1px solid rgba(255,255,255,.08)}
+}
+@media(max-width:860px){
+  .phero.pimg .wrap{grid-template-columns:1fr;gap:32px}
+  .ph-img img{height:240px}
+  .checks.two{grid-template-columns:1fr}
+  .darksec .wrap,.pcta .wrap{padding:40px 26px}
+}
+@media(max-width:620px){
+  .pillars.four{grid-template-columns:1fr}
+  .band .wrap,.darksec .wrap,.pcta .wrap{border-radius:var(--r-sm)}
+  .band,.darksec .wrap,.pcta .wrap{margin:0 12px}
+  .band-cell .cat-li{width:50px;height:50px;padding:12px}
+}
+
+/* koraci na telefonu: jedna kolona (SPL pravilo .pillars.three dolazi posle media upita) */
+.pillar{min-width:0}
+@media(max-width:860px){.pillars.three.proc{grid-template-columns:1fr}}
+@media(max-width:620px){.pillars.four.proc,.pillars.three.proc,.pillars.three{grid-template-columns:1fr}}
+
+/* razmaci oko zaobljenih tamnih blokova */
+.darksec{padding:72px 0 78px}
+.sec.alt + .darksec,.sec + .darksec{padding-top:72px}
+.band.three{padding:0 0 22px}
+
+.band:not(.three){padding:0 0 72px}
+
+/* stranice proizvoda po brošuri */
+.psub{margin-top:10px;font-size:15px;font-weight:600;color:#F3A3AA}
+.phero.pimg .lede{margin-top:14px}
+.note{margin-top:14px;font-size:13.5px;color:var(--muted)}
+.fig.light{background:#fff;border:1px solid #E8EAEE;box-shadow:var(--soft)}
+.fig.light b{color:var(--red)}
+.fig.light span{color:var(--muted)}
+.story > .figs{align-self:start}
+.darksec .prose p{color:#C9CCD0;font-size:17px;margin-top:14px}
+.home-choose td a{color:var(--red);font-weight:600}
+.tile .t-body .tsub{font-size:13.5px;font-weight:600;color:var(--red);margin:4px 0 8px;line-height:1.4}
+.choose{margin-top:56px}
+.choose h3{font-size:26px;margin-bottom:18px}
+
+/* industrije: sitnije pločice, bez linka (korisnik 19.11.2026) */
+.inds.compact{gap:12px}
+.inds.compact .ind{padding:16px 18px;display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:2px;align-items:start;align-content:start}
+.inds.compact .ind svg{width:36px;height:36px;padding:8px;grid-row:span 2}
+.inds.compact .ind strong{font-size:16px;line-height:1.2;align-self:end}
+.inds.compact .ind span{font-size:13.5px;line-height:1.45}
+.inds.compact .ind:hover{transform:none;border-color:#E8EAEE}
+.choose h2{margin-bottom:22px}
+
+/* početna: traka kategorija sitnija – 4 u redu (korisnik 19.11.2026: „previše mesta zauzima“) */
+.band:not(.three) .wrap{grid-template-columns:repeat(4,1fr)}
+.band:not(.three) .band-cell{padding:22px 22px;border-top:0!important;border-right:1px solid rgba(255,255,255,.08)!important;align-items:flex-start}
+.band:not(.three) .band-cell:last-child{border-right:0!important}
+.band:not(.three) .band-cell .bcat{flex-direction:column;align-items:flex-start;gap:12px}
+.band:not(.three) .band-cell .cat-ico{width:52px;height:34px}
+.band:not(.three) .band-cell h3{font-size:17px;margin-bottom:4px}
+.band:not(.three) .band-cell p{font-size:13px;line-height:1.5}
+.band:not(.three) .band-cell .arrow{width:32px;height:32px}
+.band:not(.three) .band-cell .arrow svg{width:13px;height:13px}
+.band:not(.three){padding:0 0 56px}
+
+/* početna: industrije – naslov u jednom redu, opis ispod, manje praznog prostora */
+section#industries{padding:56px 0 60px}
+#industries .sec-head{display:block;max-width:none;margin-bottom:22px}
+#industries .sec-head h2{font-size:clamp(24px,2.3vw,32px);margin-top:0}
+#industries .sec-head > p{max-width:70ch!important;margin-top:8px}
+
+@media(max-width:1080px){
+  .band:not(.three) .wrap{grid-template-columns:repeat(2,1fr)}
+  .band:not(.three) .band-cell:nth-child(2n){border-right:0!important}
+  .band:not(.three) .band-cell:nth-child(n+3){border-top:1px solid rgba(255,255,255,.08)!important}
+}
+@media(max-width:620px){
+  .band:not(.three) .wrap{grid-template-columns:1fr}
+  .band:not(.three) .band-cell{border-right:0!important;border-top:1px solid rgba(255,255,255,.08)!important}
+  .band:not(.three) .band-cell:first-child{border-top:0!important}
+}
+
+/* ── motion: hover (scroll reveal is in main.js GROUPS) ── */
+.tile .t-img img.photo{transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.tile:hover .t-img img.photo{transform:scale(1.06)}
+.tile h3{transition:color .2s ease}
+.tile:hover h3{color:var(--red)}
+.band-cell .cat-ico{transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.band-cell:hover .cat-ico{transform:translateX(4px) scale(1.05)}
+.inds.compact .ind svg{transition:transform .25s ease,background .25s ease}
+.inds.compact .ind:hover svg{background:rgba(200,32,47,.14)}
+@media (prefers-reduced-motion: reduce){
+  .tile:hover .t-img img.photo,.band-cell:hover .cat-ico,.ind:hover svg,.tile:hover,.btn:hover svg,.band-cell:hover .arrow{transform:none}
+}
+
+/* ═══ dopune za Spantech Poland ═══ */
+/* fotografije proizvoda sa spantech.pl su male (430×242): u vrhu stranice cele, na beloj podlozi */
+.ph-img img.fit{object-fit:contain;background:#fff;padding:18px}
+.plogo{border-radius:var(--r-sm);border-color:#E8EAEE}
+table.gas td.f a{border-radius:6px}
+footer .logo img{border-radius:var(--r-sm)}
+/* branše: samo ime, bez opisa – 4 u redu */
+.inds.compact.eight{grid-template-columns:repeat(4,1fr)}
+.inds.compact.eight .ind{align-items:center}
+.inds.compact.eight .ind svg{grid-row:auto}
+.inds.compact.eight .ind strong{align-self:center}
+@media(max-width:1080px){.inds.compact.eight{grid-template-columns:repeat(2,1fr)}}
+/* ikonice u tamnoj traci: tanke linije u crvenom krugu */
+.band-cell .cat-li{transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+.band-cell:hover .cat-li{transform:translateX(4px) scale(1.05)}
+/* prekidač jezika u gornjoj traci */
+.util .lang{display:inline-flex;gap:2px;align-items:center}
+.util .lang a,.util .lang b{padding:2px 7px;border-radius:4px;font-size:12px;letter-spacing:.04em}
+.util .lang b{background:rgba(255,255,255,.14);color:#fff;font-weight:600}
+@media(max-width:620px){.util .u-right .sep{display:none}.util .lang{margin-left:14px}}
+/* iz gornjeg dela MJS teme: tri broja u traci, grupe u tamnoj traci, tekst */
+.cband .cstats.three{margin-top:0;flex:0 1 470px}
+.cband .cstats.three .cstat:nth-child(3n){border-right:0}
+.band-cell .bcat{display:flex;align-items:center;gap:22px}
+.prose{max-width:76ch}
+.prose p + p{margin-top:16px}
+@media(max-width:1080px){.cband .cstats.three{flex:none}}
+@media(max-width:520px){.cband .cstats.three{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.band-cell .bcat{gap:14px}}
+.tile .t-body .tsub{flex:none}   /* podnaslov ne raste; prazan prostor ide ispod opisa */
+.sec.alt + .band.three{padding-top:56px}   /* razmak između sivog odeljka i trake sa ostalim proizvodima */
+
+/* ═══ ANIMACIJE (korisnik 20.11.2026: „dodaj animacije“) — sve se gasi uz „smanji pokrete“ ═══ */
+/* vrh stranice proizvoda: tekst ulazi red po red, fotografija se blago „smiri“, oznake jedna za drugom */
+@keyframes plUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes plPhoto{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
+@keyframes plPill{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
+.js .phero.pimg .wrap > *{animation:none}
+.js .phero.pimg .wrap > div > *{animation:plUp .7s cubic-bezier(.22,.61,.36,1) both}
+.js .phero.pimg .wrap > div > *:nth-child(2){animation-delay:.07s}
+.js .phero.pimg .wrap > div > *:nth-child(3){animation-delay:.14s}
+.js .phero.pimg .wrap > div > *:nth-child(4){animation-delay:.21s}
+.js .phero.pimg .wrap > div > *:nth-child(n+5){animation-delay:.28s}
+.js .phero.pimg .facts li{animation:plPill .5s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(.45s + var(--i,0) * .1s)}
+.js .phero.pimg .facts li:nth-child(2){--i:1}
+.js .phero.pimg .facts li:nth-child(3){--i:2}
+.js .ph-img{animation:plUp .8s cubic-bezier(.22,.61,.36,1) .15s both}
+.js .ph-img img{animation:plPhoto 1.4s cubic-bezier(.22,.61,.36,1) .15s both}
+.ph-img{overflow:hidden}
+.ph-img img{transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.ph-img:hover img{transform:scale(1.03)}
+
+/* početna: brojevi u traci se pojavljuju jedan za drugim i blago podignu na prelaz */
+.cstat b{display:inline-block;transition:transform .25s ease}
+.cstat:hover b{transform:translateY(-2px)}
+
+/* pločice: crvena linija preko vrha se razvuče na prelaz mišem */
+.tile{position:relative}
+.tile:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.22,.61,.36,1);z-index:2}
+.tile:hover:before{transform:scaleX(1)}
+
+/* ikonice u tamnoj traci: kratko „iskoče“ kad traka uđe u ekran */
+@keyframes plPop{0%{transform:scale(.7);opacity:0}70%{transform:scale(1.06);opacity:1}100%{transform:scale(1)}}
+.js .band-cell.reveal.in .cat-li{animation:plPop .6s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(var(--d,0ms) + .15s)}
+
+/* branše: ikonica se oboji na prelaz */
+.inds.compact .ind svg{transition:background .25s ease,color .25s ease,transform .25s ease}
+.inds.compact .ind:hover svg{background:var(--red);color:#fff;transform:scale(1.05)}
+
+/* kartice sa brojkama: blago podizanje */
+.fig.light{transition:transform .25s ease,box-shadow .25s ease}
+.fig.light:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(34,36,42,.05),0 18px 40px rgba(34,36,42,.10)}
+
+@media (prefers-reduced-motion: reduce){
+  .js .phero.pimg .wrap > div > *,.js .phero.pimg .facts li,.js .ph-img,.js .ph-img img,.js .band-cell.reveal.in .cat-li{animation:none}
+  .tile:before{transition:none}
+  .ph-img:hover img,.cstat:hover b,.fig.light:hover,.inds.compact .ind:hover svg{transform:none}
+}
+
+/* ═══ FONT (korisnik 20.11.2026: predlog C) — naslovi Source Serif 4, tekst Schibsted Grotesk; bez uskih velikih slova ═══ */
+:root{--head:'Source Serif 4',Georgia,'Times New Roman',serif}
+h1,h2,h3,h4,.h{font-weight:600;text-transform:none;letter-spacing:-.01em;line-height:1.12}
+h1{font-size:clamp(32px,4vw,50px)}
+h2{font-size:clamp(24px,2.7vw,34px)}
+h3{font-size:clamp(17px,1.45vw,20px)}
+.phero h1{font-size:clamp(32px,3.6vw,46px);max-width:18ch}
+.cband-head h1{font-size:clamp(18px,1.5vw,21px)}
+.res-card h3{font-size:24px}
+.cstat b{letter-spacing:-.01em}
+.ind strong,.inds.compact .ind strong{text-transform:none;letter-spacing:0;font-size:16px}
+.gaslist summary{text-transform:none;letter-spacing:0}
+nav.main > .item > a{text-transform:none;letter-spacing:0;font-size:14.5px}
+.fig b{letter-spacing:-.01em}
+
+/* ═══ AccuSpan Gases: dopune ═══ */
+.util .u-left b{color:#fff;font-weight:600}
+/* grupa: matična firma istaknuta, ispod nje tri dela grupe */
+.group-parent{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:var(--ink);color:#fff;border-radius:var(--r);padding:44px 48px;position:relative;overflow:hidden}
+.group-parent h3{color:#fff;font-size:clamp(24px,2.4vw,32px);margin:10px 0 12px}
+.group-parent p{color:#C9CCD0;font-size:15.5px;line-height:1.65}
+.group-parent .tag{display:inline-block;background:var(--red);color:#fff;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px}
+.group-parent .gp-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.group-parent .gp-facts div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-sm);padding:16px 18px}
+.group-parent .gp-facts b{display:block;font-family:var(--head);font-size:26px;color:#F3A3AA;line-height:1.1}
+.group-parent .gp-facts span{font-size:13px;color:#B9BDC2}
+.group-line{width:2px;height:34px;background:var(--line);margin:0 auto}
+.group-kids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.group-kid{background:#fff;border:1px solid #E8EAEE;border-radius:var(--r);box-shadow:var(--soft);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+.group-kid:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(34,36,42,.05),0 18px 40px rgba(34,36,42,.10)}
+.group-kid img{width:100%;height:150px;object-fit:cover;display:block}
+.group-kid .gk-b{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.group-kid .gk-b small{font-size:12.5px;font-weight:600;color:var(--red)}
+.group-kid h4{font-size:19px;margin:0}
+.group-kid p{font-size:14px;color:var(--muted);line-height:1.55;flex:1}
+.group-kid .rd{margin-top:8px}
+@media(max-width:1080px){.group-parent{grid-template-columns:1fr}.group-kids{grid-template-columns:1fr}}
+@media(max-width:620px){.group-parent{padding:30px 24px}}
+/* tabele cilindara */
+table.cyl{font-size:14px}
+table.cyl th{font-family:var(--body);font-size:12.5px;font-weight:600;background:var(--ink);color:#fff;padding:12px 14px;text-transform:none;letter-spacing:0;white-space:nowrap}
+table.cyl td{padding:10px 14px}
+/* kartice sa slikom (cilindri, oprema) */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:1px solid #E8EAEE;border-radius:var(--r);box-shadow:var(--soft);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(34,36,42,.05),0 18px 40px rgba(34,36,42,.10)}
+.card .c-img{background:#F4F5F7;height:200px;display:grid;place-items:center;overflow:hidden}
+.card .c-img img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.card .c-img img.cover{width:100%;height:100%;object-fit:cover}
+.card:hover .c-img img{transform:scale(1.05)}
+.card .c-b{padding:18px 20px 20px}
+.card h4{font-size:18px;margin:0 0 6px}
+.card .c-sub{font-size:13px;font-weight:600;color:var(--red);margin-bottom:8px}
+.card ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--muted);line-height:1.55}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.55}
+@media(max-width:1080px){.cards,.cards.three{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.cards,.cards.three{grid-template-columns:1fr}}
+/* spisak gasova u kolonama */
+.gascols{columns:4;column-gap:28px;font-size:14.5px;line-height:1.9;color:var(--ink)}
+@media(max-width:860px){.gascols{columns:2}}
+.tabs-note{font-size:13.5px;color:var(--muted);margin-top:12px}
+.card .c-img img:not(.cover){width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;padding:14px}
+.card .c-img{display:flex;align-items:center;justify-content:center}
+.card .c-img img:not(.cover){height:200px;width:auto;max-width:100%;padding:14px;object-fit:contain}
+.card .c-img{background:#fff;border-bottom:1px solid #EEF0F3}

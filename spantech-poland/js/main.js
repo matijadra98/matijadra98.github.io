@@ -80,7 +80,10 @@
     ['.ind', 60],
     ['.prod', 60],
     ['.res-card', 90],
-    ['.band-cell', 0],
+    ['.band-cell', 90],
+    ['.checks li', 45],
+    ['.acc details', 50],
+    ['.cmp-wrap', 0],
     ['.why-img, .why .why-item', 80],
     ['.story > div, .story-media', 90],
     ['.tl-row', 70],
@@ -285,3 +288,8 @@
     stek.push([nivo, pravi]);
   });
 })();
+
+/* izbor jezika se pamti (PL je glavni; ko izabere EN, ostaje na EN) */
+document.querySelectorAll('a[data-lang]').forEach(function(a){
+  a.addEventListener('click', function(){ try{ localStorage.setItem('lang', a.dataset.lang); }catch(e){} });
+});

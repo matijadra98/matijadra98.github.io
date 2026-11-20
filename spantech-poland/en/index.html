@@ -68,17 +68,23 @@
     </div>
   </div>
 </header>
-<!-- Tekst: spantech.pl/en_GB (naslovna) i /our-products, prenet 1:1.
+<!-- Raspored po uzoru na MJS staging (korisnik 20.11.2026). Tekst: spantech.pl/en_GB (naslovna, /our-products, /about-us), prenet 1:1.
+     Novo (kratko, činjenice sa sajta): brojevi u traci, crveni podnaslovi pločica, nazivi u tamnoj traci, naslov odeljka branša.
      Traka „Spantech Products Ltd“ i šesta pločica vode na matičnu firmu; tekst u njima je sa spantech.co.uk. -->
 <main id="page-home">
 
 <!-- ══ COMPANY BAND ══ -->
-<section class="cband solo">
+<section class="cband">
   <div class="wrap">
     <div class="cband-head">
       <h1>Quality makes the difference</h1>
-      <p>We specialise in the distribution of equipment and apparatus in the field of gas safety. Our range includes calibration gases, gas calibrators, sensors, and many other devices..</p>
+      <p>We specialise in the distribution of equipment and apparatus in the field of gas safety.</p>
       <a href="contactus.html" class="btn btn-primary cband-news">Contact us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="cstats three">
+      <div class="cstat"><b>2016</b><span>Spantech in Poland</span></div>
+      <div class="cstat"><b>1977</b><span>Experience of the Spantech group</span></div>
+      <div class="cstat"><b>4</b><span>Countries: Poland, Estonia, Latvia, Lithuania</span></div>
     </div>
   </div>
 </section>
@@ -90,55 +96,56 @@
       <div>
         <h2>Products</h2>
       </div>
+      <p style="max-width:44ch;font-size:14.5px">Our range includes calibration gases, gas calibrators, sensors, and many other devices.</p>
     </div>
-<!-- Pločice proizvoda: tekst i dugmad sa spantech.pl/en_GB/our-products, slike sa iste strane -->
+<!-- Pločice proizvoda po MJS uzoru: tekst sa spantech.pl/en_GB/our-products, slike sa iste strane; crveni podnaslov (tsub) je kratak spisak činjenica sa stranica proizvoda, bez dugmadi -->
     <div class="tiles">
       <a href="calibration-gases.html" class="tile">
         <div class="t-img"><img class="photo" loading="lazy" src="../slike/cylinders.jpg" alt="Calibration Gases" width="430" height="242"></div>
         <div class="t-body">
           <h3>Calibration Gases</h3>
+          <p class="tsub">Mixtures to order · flow regulators</p>
           <p>Spantech provides top-quality calibration gases globally, specializing in tailored mixtures and premium regulators for precise dosing.</p>
-          <div class="t-links"><span class="tlink buy">Learn More</span></div>
         </div>
       </a>
       <a href="calibration-gas-generators.html" class="tile">
         <div class="t-img"><img class="photo" loading="lazy" src="../slike/acd.jpg" alt="Calibration Gas Generators" width="430" height="242"></div>
         <div class="t-body">
           <h3>Calibration Gas Generators</h3>
+          <p class="tsub">ACD · Gazcal</p>
           <p>Portable, on-demand gas calibration solutions.</p>
-          <div class="t-links"><span class="tlink buy">Explore</span></div>
         </div>
       </a>
       <a href="gas-detector-tubes.html" class="tile">
         <div class="t-img"><img class="photo" loading="lazy" src="../slike/tubes.jpg" alt="Gas Detector Tubes" width="430" height="242"></div>
         <div class="t-body">
           <h3>Gas Detector Tubes</h3>
+          <p class="tsub">Uniphos · over 250 tube types</p>
           <p>Chemical detector tubes are an economical way for quick, on the spot, gas specific measurement of wide range of flammable, toxic gases and vapours.</p>
-          <div class="t-links"><span class="tlink buy">Get Details</span></div>
         </div>
       </a>
       <a href="gas-sensors.html" class="tile">
         <div class="t-img"><img class="photo" loading="lazy" src="../slike/sensors.jpg" alt="Gas Sensors" width="430" height="242"></div>
         <div class="t-body">
           <h3>Gas Sensors</h3>
+          <p class="tsub">Electrochemical · IR · pellistors</p>
           <p>Our comprehensive range of gas sensors is available for online purchase.</p>
-          <div class="t-links"><span class="tlink buy">Find Out</span></div>
         </div>
       </a>
       <a href="rare-gas-purification-instruments.html" class="tile">
         <div class="t-img"><img class="photo" loading="lazy" src="../slike/rgps.jpg" alt="Rare Gas Purification Instruments" width="430" height="242"></div>
         <div class="t-body">
           <h3>Rare Gas Purification Instruments</h3>
+          <p class="tsub">Sircal · MP-2000 · PD-2012</p>
           <p>Compact systems designed for delivery of purified gas directly to the point of use.</p>
-          <div class="t-links"><span class="tlink buy">See More</span></div>
         </div>
       </a>
       <a href="https://www.spantech.co.uk" class="tile" target="_blank" rel="noopener">
         <div class="t-img"><img loading="lazy" src="../slike/logo_spantech_uk.webp" alt="Spantech Products Ltd" width="2000" height="554" style="padding:40px"></div>
         <div class="t-body">
           <h3>Spantech Products Ltd</h3>
+          <p class="tsub">Parent company · United Kingdom, since 1977</p>
           <p>Founded in 1977 and family-owned to this day, Spantech supplies specialty calibration gas solutions worldwide — from our UK head office, with partner offices in Poland, India and the USA.</p>
-          <div class="t-links"><span class="tlink">spantech.co.uk</span></div>
         </div>
       </a>
     </div>
@@ -146,25 +153,61 @@
   </div>
 </section>
 
-<!-- ══ DARK SPLIT BAND ══ -->
+<!-- ══ DARK BAND — četiri polja ══ -->
 <div class="band">
   <div class="wrap">
+    <a href="gas-detector-tubes.html#gas-list" class="band-cell">
+      <div class="bcat">
+        <svg class="cat-li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6M10 3v6.5L5 19a1.5 1.5 0 001.3 2h11.4a1.5 1.5 0 001.3-2l-5-9.5V3"/><path d="M7.5 15h9"/></svg>
+        <div><h3>Gas List</h3><p>Over 250 Uniphos tube types for more than 150 substances.</p></div>
+      </div>
+      <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+    </a>
     <a href="about-us.html" class="band-cell">
-      <div>
-        <h3>About Us</h3>
-        <p>Spantech Sp. z o.o. began operations in Poland in 2016, building on experience dating back to 1977 when Dr Chandramani Narain founded Spantech Products Ltd in South Godstone, United Kingdom.</p>
+      <div class="bcat">
+        <svg class="cat-li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        <div><h3>About Us</h3><p>Spantech Sp. z o.o. in Poland since 2016.</p></div>
       </div>
       <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
     </a>
     <a href="https://www.spantech.co.uk" class="band-cell" target="_blank" rel="noopener">
-      <div>
-        <h3>Spantech Products Ltd</h3>
-        <p>Family owned and run since 1977, with partner offices in Poland, India and the USA.</p>
+      <div class="bcat">
+        <svg class="cat-li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.6 5.7 3.6 9s-1.1 6.3-3.6 9c-2.5-2.7-3.6-5.7-3.6-9S9.5 5.7 12 3z"/></svg>
+        <div><h3>Spantech Products Ltd</h3><p>Family owned and run since 1977, with partner offices in Poland, India and the USA.</p></div>
+      </div>
+      <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+    </a>
+    <a href="contactus.html" class="band-cell">
+      <div class="bcat">
+        <svg class="cat-li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
+        <div><h3>Contact Us</h3><p>+48 519 150 515 · info@spantech.pl</p></div>
       </div>
       <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
     </a>
   </div>
 </div>
+
+<!-- ══ INDUSTRIES — spisak branša sa /about-us ══ -->
+<section class="alt" id="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Our clients</h2>
+      </div>
+      <p style="max-width:44ch;font-size:14.5px">Our clients span various industries, including environmental protection, metallurgy, mining, chemistry, automotive, food, medicine, and science.</p>
+    </div>
+    <div class="inds compact eight">
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21c-4-2.5-7-6-7-10a7 7 0 0114 0c0 4-3 7.5-7 10z"/><path d="M12 8v6M9 11h6"/></svg><strong>Environmental protection</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20h18M5 20v-7h4v7M10 20V9h4v11M15 20v-5h4v5"/></svg><strong>Metallurgy</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 4l6 6M17 7L7 17M4 20l3-3M12 4h8v8"/></svg><strong>Mining</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10 3h4v6l5 9a2 2 0 01-1.7 3H6.7A2 2 0 015 18l5-9V3z"/></svg><strong>Chemistry</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 16v-4l2-5h14l2 5v4H3z"/><circle cx="7" cy="16.5" r="1.8"/><circle cx="17" cy="16.5" r="1.8"/></svg><strong>Automotive</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 4h14l-2 16H7z"/><path d="M5.6 9h12.8"/></svg><strong>Food</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg><strong>Medicine</strong></div>
+      <div class="ind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg><strong>Science</strong></div>
+    </div>
+  </div>
+</section>
 
 <!-- ══ WHY ══ -->
 <section id="about">
@@ -180,17 +223,21 @@
   </div>
 </section>
 
-<!-- ══ CTA — tekst sa spantech.pl (Calibration Gas Generators: „Request a quote today“ + „Contact us“) ══ -->
-<div class="pcta">
-  <div class="wrap">
-    <div>
-      <h2>Request a quote today</h2>
+<!-- ══ DVE KARTICE — matična firma i upit ══ -->
+<section class="alt" id="resources" style="background:var(--bg-alt)">
+  <div class="wrap res">
+    <div class="res-card">
+      <h3>Spantech Products Ltd</h3>
+      <p>Founded in 1977 and family-owned to this day, Spantech supplies specialty calibration gas solutions worldwide — from our UK head office, with partner offices in Poland, India and the USA.</p>
+      <a href="https://www.spantech.co.uk" target="_blank" rel="noopener" class="btn btn-ghost">spantech.co.uk <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
     </div>
-    <div class="acts">
-      <a href="contactus.html" class="btn btn-primary">Contact us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    <div class="res-card red">
+      <h3>Request a quote today</h3>
+      <p>Contact us for a no obligation quote.</p>
+      <a href="contactus.html" class="btn btn-onDark">Contact us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
     </div>
   </div>
-</div>
+</section>
 
 </main>
 

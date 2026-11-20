@@ -70,14 +70,22 @@ try{if(!localStorage.getItem('lang')&&!/^pl/i.test(navigator.language||'')){loca
     </div>
   </div>
 </header>
-<!-- Tekst: spantech.pl/en_GB/calibration-gas-generators, prenet 1:1. Slika sa /our-products, logotipi sa iste strane. -->
+<!-- Raspored po uzoru na MJS staging (vrh sa fotografijom, podnaslov, oznake, kartice sa brojkama, ostali proizvodi);
+     podnaslov, oznake i brojke su činjenice sa iste stranice. Tekst: spantech.pl/en_GB/calibration-gas-generators, prenet 1:1. Slika sa /our-products, logotipi sa iste strane. -->
 <main id="page-generators">
-<div class="phero">
+<div class="phero pimg">
   <div class="wrap">
-    <div class="crumb"><a href="index.html">Strona główna</a><span>/</span><a href="our-products.html">Produkty</a><span>/</span><b>Generatory gazu wzorcowego</b></div>
-    <h1>Generatory gazów kalibracyjnych</h1>
-    <p class="lede">Przenośne, na żądanie rozwiązania do kalibracji gazów.</p>
-    <a href="contactus.html" class="btn btn-primary" style="margin-top:26px">Poproś o wycenę <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    <div>
+      <div class="crumb"><a href="index.html">Strona główna</a><span>/</span><a href="our-products.html">Produkty</a><span>/</span><b>Generatory gazu wzorcowego</b></div>
+      <h1>Generatory gazów kalibracyjnych</h1>
+      <p class="psub">ACD · Gazcal</p>
+      <p class="lede">Przenośne, na żądanie rozwiązania do kalibracji gazów.</p>
+      <ul class="facts"><li>0,25–125 ppm</li><li>5–15 lat użytkowania</li></ul>
+      <div class="acts">
+        <a href="contactus.html" class="btn btn-primary">Poproś o wycenę <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+    <div class="ph-img"><img class="fit" fetchpriority="high" loading="eager" src="slike/acd.jpg" alt="Generatory gazu wzorcowego" width="430" height="242"></div>
   </div>
 </div>
 
@@ -89,8 +97,9 @@ try{if(!localStorage.getItem('lang')&&!/^pl/i.test(navigator.language||'')){loca
       <p style="margin-top:16px">Zdolność do generowania gazu na żądanie pozwala na wykorzystanie pojedynczego źródła kalibracji do produkcji zmiennych stężeń, w przeciwieństwie do cylindrów oferujących stałe stężenia. Większość generatorów może dostarczać stężenia w zakresie od 0,25 do 125 części na milion, z możliwością regulacji przepływu.</p>
       <div class="pull">Podsumowując, generatory gazów kalibracyjnych oferują liczne korzyści, w tym nieograniczony okres przydatności do użycia, bezpieczny transport powietrzny, możliwość wyboru przepływu i stężenia, kompatybilność z wymiennymi gazami, przenośność i wyjątkową dokładność.</div>
     </div>
-    <div class="story-media">
-      <img fetchpriority="high" loading="eager" src="slike/acd.jpg" alt="Generatory gazu wzorcowego" width="430" height="242">
+    <div class="figs">
+      <div class="fig light"><b>0,25–125</b><span>ppm, regulowane stężenie</span></div>
+      <div class="fig light"><b>5–15</b><span>lat z jednego źródła kalibracji</span></div>
     </div>
   </div>
 </section>
@@ -116,6 +125,23 @@ try{if(!localStorage.getItem('lang')&&!/^pl/i.test(navigator.language||'')){loca
     </div>
   </div>
 </section>
+
+<div class="band three">
+  <div class="wrap">
+    <a href="calibration-gases.html" class="band-cell">
+      <div><h3>Gazy kalibracyjne</h3><p>Mieszaniny na zamówienie · regulatory przepływu</p></div>
+      <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+    </a>
+    <a href="gas-detector-tubes.html" class="band-cell">
+      <div><h3>Próbówki do detekcji gazów</h3><p>Uniphos · ponad 250 typów rurek</p></div>
+      <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+    </a>
+    <a href="gas-sensors.html" class="band-cell">
+      <div><h3>Czujniki gazowe</h3><p>Elektrochemiczne · IR · pellistory</p></div>
+      <span class="arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+    </a>
+  </div>
+</div>
 
 <!-- ══ CTA — tekst sa spantech.pl (Calibration Gas Generators: „Request a quote today“ + „Contact us“) ══ -->
 <div class="pcta">

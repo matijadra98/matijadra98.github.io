@@ -82,6 +82,7 @@
     ['.res-card', 90],
     ['.band-cell', 90],
     ['.checks li', 45],
+    ['.fig', 90],
     ['.acc details', 50],
     ['.cmp-wrap', 0],
     ['.why-img, .why .why-item', 80],

@@ -240,3 +240,50 @@ footer .logo img{border-radius:var(--r-sm)}
 @media(max-width:620px){.band-cell .bcat{gap:14px}}
 .tile .t-body .tsub{flex:none}   /* podnaslov ne raste; prazan prostor ide ispod opisa */
 .sec.alt + .band.three{padding-top:56px}   /* razmak između sivog odeljka i trake sa ostalim proizvodima */
+
+/* ═══ ANIMACIJE (korisnik 20.11.2026: „dodaj animacije“) — sve se gasi uz „smanji pokrete“ ═══ */
+/* vrh stranice proizvoda: tekst ulazi red po red, fotografija se blago „smiri“, oznake jedna za drugom */
+@keyframes plUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes plPhoto{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
+@keyframes plPill{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
+.js .phero.pimg .wrap > *{animation:none}
+.js .phero.pimg .wrap > div > *{animation:plUp .7s cubic-bezier(.22,.61,.36,1) both}
+.js .phero.pimg .wrap > div > *:nth-child(2){animation-delay:.07s}
+.js .phero.pimg .wrap > div > *:nth-child(3){animation-delay:.14s}
+.js .phero.pimg .wrap > div > *:nth-child(4){animation-delay:.21s}
+.js .phero.pimg .wrap > div > *:nth-child(n+5){animation-delay:.28s}
+.js .phero.pimg .facts li{animation:plPill .5s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(.45s + var(--i,0) * .1s)}
+.js .phero.pimg .facts li:nth-child(2){--i:1}
+.js .phero.pimg .facts li:nth-child(3){--i:2}
+.js .ph-img{animation:plUp .8s cubic-bezier(.22,.61,.36,1) .15s both}
+.js .ph-img img{animation:plPhoto 1.4s cubic-bezier(.22,.61,.36,1) .15s both}
+.ph-img{overflow:hidden}
+.ph-img img{transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.ph-img:hover img{transform:scale(1.03)}
+
+/* početna: brojevi u traci se pojavljuju jedan za drugim i blago podignu na prelaz */
+.cstat b{display:inline-block;transition:transform .25s ease}
+.cstat:hover b{transform:translateY(-2px)}
+
+/* pločice: crvena linija preko vrha se razvuče na prelaz mišem */
+.tile{position:relative}
+.tile:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.22,.61,.36,1);z-index:2}
+.tile:hover:before{transform:scaleX(1)}
+
+/* ikonice u tamnoj traci: kratko „iskoče“ kad traka uđe u ekran */
+@keyframes plPop{0%{transform:scale(.7);opacity:0}70%{transform:scale(1.06);opacity:1}100%{transform:scale(1)}}
+.js .band-cell.reveal.in .cat-li{animation:plPop .6s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(var(--d,0ms) + .15s)}
+
+/* branše: ikonica se oboji na prelaz */
+.inds.compact .ind svg{transition:background .25s ease,color .25s ease,transform .25s ease}
+.inds.compact .ind:hover svg{background:var(--red);color:#fff;transform:scale(1.05)}
+
+/* kartice sa brojkama: blago podizanje */
+.fig.light{transition:transform .25s ease,box-shadow .25s ease}
+.fig.light:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(34,36,42,.05),0 18px 40px rgba(34,36,42,.10)}
+
+@media (prefers-reduced-motion: reduce){
+  .js .phero.pimg .wrap > div > *,.js .phero.pimg .facts li,.js .ph-img,.js .ph-img img,.js .band-cell.reveal.in .cat-li{animation:none}
+  .tile:before{transition:none}
+  .ph-img:hover img,.cstat:hover b,.fig.light:hover,.inds.compact .ind:hover svg{transform:none}
+}

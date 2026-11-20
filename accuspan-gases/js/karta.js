@@ -9,7 +9,7 @@
       addr:'Unit 1a, Britannic Works, Broom Street, Hanley, Stoke-on-Trent, ST1 2ER, United Kingdom',
       tel:'+44 (0) 1782 616611', email:'info@accuspangases.com',
       note:'Many products are held in stock at our UK manufacturing plant and can be shipped next day.',
-      page:'accuspan-gases-uk.html', pin:[-2.18,53.02], pinLabel:'Stoke', lab:[-9,4,'end'], countries:['United Kingdom'] },
+      page:'accuspan-gases-uk.html', pin:[-2.18,53.02], pinLabel:'Stoke', lab:[-9,4,'end'], countries:['United Kingdom','Isle of Man','Guernsey','Jersey'] },
     { key:'eu', label:'Europe', name:'Europe',
       org:'AccuSpan Gases EU Distribution Hub', badge:'Distribution hub',
       cov:'Europe — the Benelux region and the wider European Union',
@@ -20,7 +20,7 @@
       countries:['Albania','Austria','Belarus','Belgium','Bosnia and Herz.','Bulgaria','Croatia','Cyprus','N. Cyprus','Czechia','Denmark',
         'Estonia','Finland','France','Germany','Greece','Hungary','Iceland','Ireland','Italy','Kosovo','Latvia','Lithuania','Luxembourg',
         'Macedonia','Moldova','Montenegro','Netherlands','Norway','Poland','Portugal','Romania','Serbia','Slovakia','Slovenia','Spain',
-        'Sweden','Switzerland','Ukraine','Russia'] },
+        'Sweden','Switzerland','Ukraine','Russia','Andorra','Liechtenstein','Malta','Monaco','San Marino','Vatican','Faeroe Is.','Åland'] },
     { key:'in', label:'India & Asia', name:'India & Asia',
       org:'AccuSpan Calgas India Pvt Ltd', badge:'AccuSpan Gases India',
       cov:'India and Asia',
@@ -31,7 +31,8 @@
       countries:['India','Afghanistan','Armenia','Azerbaijan','Bangladesh','Bhutan','Brunei','Cambodia','China','Georgia','Indonesia','Iran',
         'Iraq','Israel','Japan','Jordan','Kazakhstan','Kuwait','Kyrgyzstan','Laos','Lebanon','Malaysia','Mongolia','Myanmar','Nepal',
         'North Korea','Oman','Pakistan','Palestine','Philippines','Qatar','Saudi Arabia','South Korea','Sri Lanka','Syria','Taiwan',
-        'Tajikistan','Thailand','Timor-Leste','Turkey','Turkmenistan','United Arab Emirates','Uzbekistan','Vietnam','Yemen'] }
+        'Tajikistan','Thailand','Timor-Leste','Turkey','Turkmenistan','United Arab Emirates','Uzbekistan','Vietnam','Yemen',
+        'Bahrain','Hong Kong','Macao','Maldives','Singapore','Siachen Glacier'] }
   ];
   var byCountry = {}, byKey = {};
   REGIONS.forEach(function(r){ byKey[r.key] = r; r.countries.forEach(function(c){ byCountry[c] = r.key; }); });
@@ -96,13 +97,15 @@
 
   function start(){
     if (!window.d3 || !window.topojson) { fail(); return; }
-    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(world){
+    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json').then(function(world){
       var feats = topojson.feature(world, world.objects.countries).features.filter(function(f){ return f.properties.name !== 'Antarctica'; });
       var svg = d3.select('#worldmap'), g = svg.append('g'), gPins = svg.append('g');
+      svg.attr('preserveAspectRatio', 'xMidYMid meet');
       function draw(){
         var w = stage.clientWidth, h = stage.clientHeight;
         svg.attr('viewBox', '0 0 ' + w + ' ' + h);
-        var proj = d3.geoNaturalEarth1().fitExtent([[8, 10], [w - 8, h - 10]], { type:'FeatureCollection', features: feats });
+        // Merkator, kao na atlasu: oblici zemalja verni; krajnji sever i jug odsečeni (od 58° J do 80° S)
+        var proj = d3.geoMercator().fitExtent([[6, 6], [w - 6, h - 6]], { type:'MultiPoint', coordinates:[[-180, -58], [180, 80]] });
         var path = d3.geoPath(proj);
         var sel = g.selectAll('path').data(feats);
         sel.enter().append('path')

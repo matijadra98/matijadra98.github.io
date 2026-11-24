@@ -312,14 +312,16 @@ document.querySelectorAll('a[data-lang]').forEach(function(a){
 
 /* Technical Documentation: pretraga SDS po nazivu gasa, poruka kad je spisak prazan */
 (function(){
-  var t = document.getElementById('sdsTable'), q = document.getElementById('sdsSearch'), prazno = document.getElementById('sdsEmpty');
+  var t = document.getElementById('sdsTable'), q = document.getElementById('sdsSearch'), prazno = document.getElementById('sdsEmpty'), nema = document.getElementById('sdsNone');
   if (!t) return;
   var redovi = [].slice.call(t.tBodies[0].rows);
   function filtriraj(){
     var s = (q && q.value || '').trim().toLowerCase(), vidljivo = 0;
-    redovi.forEach(function(r){ var da = !s || r.textContent.toLowerCase().indexOf(s) > -1; r.hidden = !da; if (da) vidljivo++; });
+    var n = s.replace(/₂/g,'2').replace(/₄/g,'4').replace(/\s+/g,' ');
+    redovi.forEach(function(r){ var tekst = (r.textContent + ' ' + (r.getAttribute('data-szukaj') || '')).toLowerCase().replace(/₂/g,'2').replace(/₄/g,'4'); var da = !n || tekst.indexOf(n) > -1; r.hidden = !da; if (da) vidljivo++; });
     t.classList.toggle('is-empty', !vidljivo);
-    if (prazno) prazno.hidden = !!vidljivo;
+    if (prazno) prazno.hidden = redovi.length > 0;
+    if (nema) nema.hidden = !(redovi.length && !vidljivo);
   }
   if (q) q.addEventListener('input', filtriraj);
   filtriraj();

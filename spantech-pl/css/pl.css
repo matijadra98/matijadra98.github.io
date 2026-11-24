@@ -332,3 +332,19 @@ table.sds.is-empty tbody{display:none}
 .cb-acts{display:flex;gap:10px;flex:none}
 @media(max-width:620px){.cookiebar{flex-direction:column;align-items:stretch}.cb-acts{justify-content:flex-end}
   table.sds th:nth-child(3),table.sds td:nth-child(3){display:none}.sds-empty{flex-direction:column;align-items:flex-start}}
+
+/* SDS: dugme za preuzimanje (Artur 24.11.2026) */
+table.sds td:first-child{font-weight:600}
+table.sds td:last-child{text-align:right;width:1%}
+table.sds a.dl{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;border:1px solid var(--red);color:var(--red);font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
+table.sds a.dl:hover{background:var(--red);color:#fff}
+table.sds tbody tr:hover td{background:var(--bg-alt)}
+@media (max-width:640px){
+  table.sds thead{display:none}
+  table.sds tbody tr{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:14px;padding:16px 18px;border-top:1px solid #EEF0F3}
+  table.sds tbody tr:first-child{border-top:0}
+  table.sds tbody tr[hidden]{display:none}
+  table.sds td{border:0;padding:0}
+  table.sds td:nth-child(2){grid-column:1;font-size:13px;color:var(--ink-2);margin-top:4px}
+  table.sds td:last-child{grid-column:2;grid-row:1/3}
+}

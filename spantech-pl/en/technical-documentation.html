@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=4b4ced5a">
-<link rel="stylesheet" href="../css/pl.css?v=4b4ced5a">
+<link rel="stylesheet" href="../css/style.css?v=cf10750a">
+<link rel="stylesheet" href="../css/pl.css?v=cf10750a">
 <meta name="description" content="Safety data sheets (SDS) for the gases we supply, ready to download as PDF.">
 <link rel="canonical" href="https://matijadra98.github.io/spantech-pl/en/technical-documentation.html">
 <link rel="alternate" hreflang="pl-PL" href="https://www.spantech.pl/technical-documentation">
@@ -189,6 +189,7 @@
     </div>
   </div>
 </header>
+<!-- Artur 24.11.2026: poslao 3 SDS na poljskom (obavezni za svaku uvezenu mešavinu); kupcima šalje link. Gas i šifra iz samih SDS (odeljci 1, 3 i 14). -->
 <!-- Artur 23.11.2026: odeljak „Technical documentation“ (Dokumentacja techniczna) za SDS listove gasova, koje on sam dodaje i menja.
      U mockupu je prazan spisak: dokumenta još nemamo (ništa se ne izmišlja). Pretraga radi čim se dodaju redovi.
      U Odoo-u: Artur dodaje red (gas + PDF) u editoru sajta; za to mu treba Odoo korisnik sa pravom uređivanja sajta. -->
@@ -213,13 +214,20 @@
       <table class="sds" id="sdsTable">
         <thead><tr><th>Gas</th><th>Document</th><th>Language</th><th></th></tr></thead>
         <tbody>
+          <tr data-szukaj="h2s co ch4 o2 n2"><td>4-gas mixture: H₂S, CO, CH₄, O₂ in nitrogen</td><td>Safety Data Sheet · DAQUAD-003</td><td>PL</td><td><a class="dl" href="../dokumenti/KCH_DAQUAD-003.pdf" target="_blank" rel="noopener" download>PDF</a></td></tr>
+          <tr data-szukaj="co n2"><td>Carbon monoxide (CO) in nitrogen</td><td>Safety Data Sheet · DACOA-000020</td><td>PL</td><td><a class="dl" href="../dokumenti/KCH_DACOA-000020.pdf" target="_blank" rel="noopener" download>PDF</a></td></tr>
+          <tr data-szukaj="ch4 n2"><td>Methane (CH₄) in nitrogen</td><td>Safety Data Sheet · DACH4A-0250000</td><td>PL</td><td><a class="dl" href="../dokumenti/KCH_DACH4A-0250000.pdf" target="_blank" rel="noopener" download>PDF</a></td></tr>
           <!-- red po dokumentu, npr.:
-          <tr><td>Methane (CH4)</td><td>Safety Data Sheet</td><td>PL</td><td><a class="dl" href="dokumenti/....pdf" target="_blank" rel="noopener">PDF</a></td></tr> -->
+          <tr><td>Methane (CH4)</td><td>Safety Data Sheet</td><td>PL</td><td><a class="dl" href="../dokumenti/....pdf" target="_blank" rel="noopener">PDF</a></td></tr> -->
         </tbody>
       </table>
       <div class="sds-empty" id="sdsEmpty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
         <p><b>Documents will be published here soon.</b><br>If you need a safety data sheet now, write to us at <a href="mailto:info@spantech.pl">info@spantech.pl</a>.</p>
+      </div>
+      <div class="sds-empty" id="sdsNone" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <p><b>No document found for this gas.</b><br>Write to us at <a href="mailto:info@spantech.pl">info@spantech.pl</a> and we will send you the safety data sheet.</p>
       </div>
     </div>
   </div>
@@ -306,7 +314,7 @@
   </div>
 </div>
 
-<script src="../js/main.js?v=4b4ced5a"></script>
+<script src="../js/main.js?v=cf10750a"></script>
 
 </body>
 </html>
